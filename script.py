@@ -61,7 +61,7 @@ vect.fit(processed_reviews)
 # Finalize the data
 bag_of_words = vect.transform(processed_reviews)
 for_model = pd.DataFrame(bag_of_words.toarray(), columns=vect.get_feature_names())
-for_model['length'] = len_tokens
+for_model['review_length'] = len_tokens
 print(for_model.head())
 
 # Create a logistic regression model
